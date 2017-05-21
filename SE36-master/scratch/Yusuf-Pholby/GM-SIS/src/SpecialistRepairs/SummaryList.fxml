@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SpecialistRepairs.SummaryListController">
+    <stylesheets>
+        <URL value="@/Resources/style.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="32.0" layoutY="14.0" text="Summary List of parts and vehicles outstanding" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="31.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutY="74.0" prefHeight="385.0" prefWidth="400.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
+        <columns>
+          <TableColumn fx:id="BookingIDCol" prefWidth="75.0" text="Booking ID" />
+          <TableColumn fx:id="NameCol" prefWidth="99.0" text="Name" />
+            <TableColumn fx:id="TypeCol" prefWidth="100.0" text="Type" />
+            <TableColumn fx:id="ReturnCol" prefWidth="75.0" text="Return Date" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="343.0" layoutY="465.0" mnemonicParsing="false" onAction="#CloseWindow" text="Close" />
+      <Label fx:id="dateText" layoutX="31.0" layoutY="44.0" text="Today's date: 26/03/17" />
+   </children>
+</AnchorPane>

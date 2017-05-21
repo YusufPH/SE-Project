@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="302.0" layoutY="30.0" mnemonicParsing="false" text="Admin Panel" />
+      <MenuBar layoutX="14.0" layoutY="90.0" prefHeight="29.0" prefWidth="575.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Home">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Bookings">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Customer Information">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Vehicles">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Parts">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Specialist Repair Cent">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Canvas height="296.0" layoutX="13.0" layoutY="90.0" width="575.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect>
+      </Canvas>
+      <Label layoutX="403.0" layoutY="35.0" text="Logged as Admin" />
+      <Button layoutX="518.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="68.0" text="Log out" />
+      <Button layoutX="518.0" layoutY="44.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="68.0" text="Quit" />
+      <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="14.0" layoutY="16.0">
+         <image>
+            <Image url="@Screen%20Shot%202017-01-24%20at%2000.20.21.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

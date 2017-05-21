@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerAccounts.CustomerAccountsGUIController">
+   <children>
+      <TableView layoutY="92.0" prefHeight="264.0" prefWidth="894.0">
+        <columns>
+            <TableColumn prefWidth="75.0" text="Customer ID" />
+            <TableColumn prefWidth="75.0" text="Customer Type" />
+          <TableColumn prefWidth="75.0" text="Firstname" />
+          <TableColumn prefWidth="75.0" text="Lastname" />
+            <TableColumn prefWidth="120.26115417480469" text="Address" />
+            <TableColumn prefWidth="85.74942016601562" text="City/Town" />
+            <TableColumn prefWidth="91.74945068359375" text="County" />
+            <TableColumn prefWidth="86.662353515625" text="Postcode" />
+            <TableColumn prefWidth="91.19573974609375" text="Phone No" />
+            <TableColumn prefWidth="113.31451416015625" text="Email Address" />
+        </columns>
+      </TableView>
+      <TextField layoutX="127.0" layoutY="18.0" prefHeight="27.0" prefWidth="295.0" />
+      <Label layoutX="7.0" layoutY="24.0" text="Search Customer" />
+      <Button layoutX="128.0" layoutY="51.0" mnemonicParsing="false" text="Search" />
+      <Button layoutX="488.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="27.0" prefWidth="124.0" text="Add Customer" />
+      <Button layoutX="565.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleEditButtonAction" prefHeight="27.0" prefWidth="124.0" text="Edit Customer" />
+      <Button layoutX="641.0" layoutY="17.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="124.0" text="Delete Customer" />
+      <TableView layoutX="-11.0" layoutY="383.0" prefHeight="200.0" prefWidth="291.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TableView layoutX="281.0" layoutY="384.0" prefHeight="200.0" prefWidth="297.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TableView layoutX="579.0" layoutY="383.0" prefHeight="200.0" prefWidth="317.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Label layoutX="89.0" layoutY="363.0" text="Booking Details" />
+      <Label layoutX="393.0" layoutY="361.0" text="Vehicle Record" />
+      <Label layoutX="700.0" layoutY="362.0" text="Parts fitted" />
+      <AnchorPane id="AnchorPane" layoutX="895.0" layoutY="93.0" prefHeight="403.0" prefWidth="475.0">
+         <children>
+            <Label layoutX="75.0" layoutY="5.0" text="Edit Customer">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="88.0" text="Firstname" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="219.0" />
+            <Label layoutX="20.0" layoutY="122.0" text="Lastname" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="223.0" />
+            <Label layoutX="23.0" layoutY="155.0" text="Address Line 1" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="220.0" />
+            <Label layoutX="21.0" layoutY="189.0" prefHeight="10.0" prefWidth="92.0" text="Address Line 2" AnchorPane.leftAnchor="20.0" />
+            <Label layoutX="24.0" layoutY="226.0" text="City/Town" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="217.0" />
+            <Label layoutX="24.0" layoutY="260.0" text="County" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="217.0" />
+            <Label layoutX="21.0" layoutY="294.0" text="Postcode" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="218.0" />
+            <Label layoutX="16.0" layoutY="328.0" text="Phone No" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="231.0" />
+            <Label layoutX="23.0" layoutY="362.0" text="Email Address" AnchorPane.leftAnchor="20.0" />
+            <TextField layoutX="122.0" layoutY="83.0" prefHeight="5.0" prefWidth="167.0" AnchorPane.rightAnchor="180.0" />
+            <TextField layoutX="126.0" layoutY="117.0" AnchorPane.rightAnchor="180.0" />
+            <TextField layoutX="126.0" layoutY="150.0" prefHeight="5.0" prefWidth="167.0" AnchorPane.rightAnchor="180.0" />
+            <TextField layoutX="130.0" layoutY="184.0" AnchorPane.rightAnchor="180.0" />
+            <TextField layoutX="125.0" layoutY="221.0" prefHeight="5.0" prefWidth="167.0" AnchorPane.rightAnchor="180.0" />
+            <TextField layoutX="129.0" layoutY="255.0" AnchorPane.rightAnchor="180.0" />
+            <TextField layoutX="126.0" layoutY="289.0" prefHeight="5.0" prefWidth="167.0" AnchorPane.rightAnchor="180.0" />
+            <TextField layoutX="126.0" layoutY="323.0" AnchorPane.rightAnchor="180.0" />
+            <TextField layoutX="126.0" layoutY="357.0" prefHeight="0.0" prefWidth="167.0" AnchorPane.rightAnchor="180.0" />
+         </children>
+      </AnchorPane>
+      <MenuButton layoutX="1025.0" layoutY="485.0" mnemonicParsing="false" text="Customer Type" AnchorPane.rightAnchor="216.0">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Private" />
+            <MenuItem mnemonicParsing="false" text="Business" />
+         </items>
+      </MenuButton>
+      <Button layoutX="1025.0" layoutY="546.0" mnemonicParsing="false" text="Save Customer" />
+      <Button cancelButton="true" layoutX="1158.0" layoutY="546.0" mnemonicParsing="false" text="Clear" />
+   </children>
+</AnchorPane>

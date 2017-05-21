@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerAccounts.CustomerAccountsGUIController">
+   <children>
+      <TableView fx:id="customerTable" layoutY="92.0" onSort="#fillTable" prefHeight="264.0" prefWidth="874.0">
+        <columns>
+            <TableColumn fx:id="cType" prefWidth="100.70769500732422" text="Customer Type" />
+          <TableColumn fx:id="fName" prefWidth="100.70769500732422" text="Firstname" />
+          <TableColumn fx:id="lName" minWidth="2.031768798828125" prefWidth="90.41902160644531" text="Lastname" />
+            <TableColumn fx:id="address" prefWidth="189.8837890625" text="Address" />
+            <TableColumn fx:id="postcode" prefWidth="102.11618041992188" text="Postcode" />
+            <TableColumn fx:id="pnumber" prefWidth="105.29592895507812" text="Phone No" />
+            <TableColumn fx:id="email" minWidth="0.0" prefWidth="171.4189453125" text="Email Address" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchBar" layoutX="127.0" layoutY="51.0" onKeyTyped="#searchBar" prefHeight="27.0" prefWidth="404.0" />
+      <Label layoutX="7.0" layoutY="57.0" text="Search Customer" />
+      <Button fx:id="addbuttonOption" layoutX="548.0" layoutY="17.0" mnemonicParsing="false" onAction="#showAdd" prefHeight="27.0" prefWidth="124.0" text="Add Customer" />
+      <Button fx:id="editbuttonOption" layoutX="683.0" layoutY="18.0" mnemonicParsing="false" onAction="#enableEdit" prefHeight="27.0" prefWidth="124.0" text="Edit Customer" />
+      <Button layoutX="549.0" layoutY="53.0" mnemonicParsing="false" onAction="#delete" prefHeight="27.0" prefWidth="124.0" text="Delete Customer" />
+      <AnchorPane id="AnchorPane" layoutX="887.0" layoutY="92.0" prefHeight="528.0" prefWidth="589.0">
+         <children>
+            <Label fx:id="editcustomerLabel" layoutX="75.0" layoutY="5.0" text="Edit Customer" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <GridPane fx:id="pane" layoutX="17.0" layoutY="61.0" minHeight="0.0" minWidth="0.0" prefHeight="336.0" prefWidth="360.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.1680908203125" minWidth="10.0" prefWidth="174.119873046875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="185.880126953125" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Firstname" GridPane.rowIndex="1" />
+                  <Label text="Lastname" GridPane.rowIndex="2" />
+                  <Label text="Address" GridPane.rowIndex="3" />
+                  <Label text="Postcode" GridPane.rowIndex="4" />
+                  <Label text="Phone No" GridPane.rowIndex="5" />
+                  <Label text="Email Address" GridPane.rowIndex="6" />
+                  <TextField fx:id="fname_field" prefHeight="5.0" prefWidth="167.0" promptText="FirstName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="lname_field" prefHeight="5.0" prefWidth="167.0" promptText="LastName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="address_field" prefHeight="5.0" prefWidth="167.0" promptText="Address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="postcode_field" promptText="PostCode" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="pnumber_field" prefHeight="5.0" prefWidth="167.0" promptText="Phone No" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="email_field" prefHeight="0.0" prefWidth="167.0" promptText="Email Address" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label text="Type of Customer" GridPane.rowIndex="8" />
+                  <ChoiceBox fx:id="customerType" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Button fx:id="savebuttonPane" mnemonicParsing="false" onAction="#EditCustomer" prefHeight="27.0" prefWidth="124.0" snapToPixel="false" text="Save Customer" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <Button fx:id="addbuttonPane" mnemonicParsing="false" onAction="#AddCustomer" text="Add Customer" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+               </children>
+            </GridPane>
+            <Label fx:id="addcustomerLabel" layoutX="85.0" layoutY="15.0" text="Add Customer" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="-5.0" layoutY="356.0" prefHeight="218.0" prefWidth="879.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Booking">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="bookingTable" layoutX="5.0" prefHeight="200.0" prefWidth="876.0">
+                          <columns>
+                            <TableColumn fx:id="pbookingDate" prefWidth="150.0" text="Past Booking Date (status)" />
+                              <TableColumn fx:id="fbookingDate" prefWidth="187.49581909179688" text="Future Booking Date" />
+                              <TableColumn fx:id="bookingType" prefWidth="176.08319091796875" text="Booking Type" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Vehicles">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="recordsTable" prefHeight="200.0" prefWidth="876.0">
+                           <columns>
+                              <TableColumn fx:id="regNumber" prefWidth="159.77945733070374" text="Registration Number" />
+                              <TableColumn fx:id="model" prefWidth="153.3237762451172" text="Model" />
+                              <TableColumn fx:id="make" prefWidth="112.67622375488281" text="Make" />
+                              <TableColumn fx:id="engSize" prefWidth="115.61309814453125" text="Engine Size" />
+                              <TableColumn fx:id="fuelType" prefWidth="101.41818237304688" text="Fuel Type" />
+                              <TableColumn fx:id="colour" prefWidth="92.59310913085938" text="Colour" />
+                              <TableColumn fx:id="currentMileage" prefWidth="140.47845458984375" text="Current Mileage" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Parts">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="partsTable" layoutX="1.0" prefHeight="213.0" prefWidth="879.0">
+                           <columns>
+                              <TableColumn fx:id="partsID" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="partsName" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="partsDesc" prefWidth="388.15199279785156" text="Description" />
+                              <TableColumn fx:id="partsStock" prefWidth="121.84796142578125" text="StockQuantity" />
+                              <TableColumn fx:id="partsCost" prefWidth="102.86529541015625" text="Cost" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <RadioButton fx:id="nameRadio" layoutX="25.0" layoutY="22.0" mnemonicParsing="false" onAction="#searchByName" text="Search by Name">
+         <toggleGroup>
+            <ToggleGroup fx:id="criteria" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="regRadio" layoutX="177.0" layoutY="23.0" mnemonicParsing="false" onAction="#searchByReg" text="Search by Registration" toggleGroup="$criteria" />
+      <Button fx:id="makeBookingOption" layoutX="684.0" layoutY="53.0" mnemonicParsing="false" onAction="#openRepairsTab" text="Make Booking" />
+   </children>
+</AnchorPane>

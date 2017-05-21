@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Parts.PartsGUIController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="All Parts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="36.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+                          <columns>
+                            <TableColumn fx:id="partID" prefWidth="120.0" text="ID" />
+                            <TableColumn fx:id="partName" prefWidth="120.0" text="Name" />
+                              <TableColumn fx:id="partDesc" prefWidth="120.0" text="Description" />
+                              <TableColumn fx:id="partQuantity" prefWidth="120.0" text="Stock Quantity" />
+                              <TableColumn fx:id="partCost" prefWidth="120.0" text="Cost" />
+                          </columns>
+                        </TableView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PARTS" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="14.0" layoutY="340.0" mnemonicParsing="false" text="Withdraw" />
+                        <Button layoutX="109.0" layoutY="340.0" mnemonicParsing="false" text="Deposit" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Vehicle Parts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="36.0" prefHeight="300.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn prefWidth="120.0" text="Name" />
+                              <TableColumn prefWidth="120.0" text="Description" />
+                              <TableColumn prefWidth="120.0" text="ID" />
+                              <TableColumn prefWidth="120.0" text="Stock Quantity" />
+                              <TableColumn prefWidth="120.0" text="Cost" />
+                           </columns>
+                        </TableView>
+                        <MenuButton layoutX="34.0" layoutY="6.0" mnemonicParsing="false" text="Vehicle List">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Vehicle 1" />
+                            <MenuItem mnemonicParsing="false" text="Vehicle 2" />
+                              <MenuItem mnemonicParsing="false" text="Vehicle 3" />
+                              <MenuItem mnemonicParsing="false" text="Vehicle 4" />
+                          </items>
+                        </MenuButton>
+                        <Button layoutX="34.0" layoutY="340.0" mnemonicParsing="false" text="Add" />
+                        <Button layoutX="100.0" layoutY="340.0" mnemonicParsing="false" text="Edit" />
+                        <Button layoutX="167.0" layoutY="340.0" mnemonicParsing="false" text="Remove" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

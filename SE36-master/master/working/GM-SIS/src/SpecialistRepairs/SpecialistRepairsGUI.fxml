@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SpecialistRepairs.SpecialistRepairsGUIController">
+   <children>
+      <TabPane layoutX="6.0" layoutY="14.0" prefHeight="584.0" prefWidth="1141.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="SPCs">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table" editable="true" layoutX="10.0" layoutY="101.0" prefHeight="443.0" prefWidth="1119.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                           <columns>
+                              <TableColumn fx:id="CustIDCol" prefWidth="138.97608077526093" text="CustomerID" />
+                              <TableColumn fx:id="IDCol" prefWidth="141.02392578125" text="ID" />
+                              <TableColumn fx:id="nameCol" prefWidth="197.68963623046875" text="Name" />
+                              <TableColumn fx:id="addressCol" prefWidth="226.310302734375" text="Address" />
+                              <TableColumn fx:id="phoneCol" minWidth="-1.0" prefWidth="185.87255859375" text="Phone" />
+                              <TableColumn fx:id="emailCol" prefWidth="166.3909912109375" text="Email" />
+                           </columns>
+                        </TableView>
+                        <HBox layoutX="17.0" layoutY="35.0" prefHeight="31.0" prefWidth="300.0" spacing="50.0">
+                           <children>
+                              <Button fx:id="editSPC" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enableEdit" prefHeight="30.0" prefWidth="70.0" text="Edit" />
+                              <Button fx:id="addSPC" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#enableAdd" prefHeight="30.0" prefWidth="70.0" text="Add" />
+                              <Button fx:id="deleteSPC" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#DeleteSPC" prefHeight="30.0" prefWidth="70.0" text="Delete" />
+                           </children>
+                        </HBox>
+                        <GridPane fx:id="pane" hgap="10.0" layoutX="354.0" layoutY="-1.0" prefHeight="90.0" prefWidth="764.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.233642578125" minWidth="10.0" prefWidth="102.78497314453125" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.4954833984375" minWidth="10.0" prefWidth="95.21502685546875" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Name" GridPane.columnIndex="1" />
+                              <TextField fx:id="addressField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label text="Address" GridPane.columnIndex="2" />
+                              <TextField fx:id="phoneField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextField fx:id="emailField" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <Button fx:id="addSPCButton" mnemonicParsing="false" onAction="#AddSPC" text="Add SPC" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <Label text="Phone" GridPane.columnIndex="3" />
+                              <Label text="Email" GridPane.columnIndex="4" />
+                              <Label text="ID" />
+                              <TextField fx:id="idField" GridPane.rowIndex="1" />
+                              <Button fx:id="editSPCButton" layoutX="731.0" layoutY="64.0" mnemonicParsing="false" onAction="#EditSPC" prefHeight="23.0" prefWidth="256.0" text="Apply Edit" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="SPC Bookings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="spcChoice" layoutX="905.0" layoutY="36.0" prefWidth="150.0" />
+                        <TableView layoutX="1.0" layoutY="82.0" prefHeight="469.0" prefWidth="1134.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                           <columns>
+                              <TableColumn prefWidth="120.0" text="BookingID" />
+                              <TableColumn prefWidth="120.0" text="ID" />
+                              <TableColumn prefWidth="122.00001525878906" text="Type" />
+                              <TableColumn prefWidth="122.00001525878906" text="Details" />
+                              <TableColumn prefWidth="186.0423583984375" text="ExpectedDeliveryDate" />
+                              <TableColumn prefWidth="214.1036376953125" text="ExpectedReturnDate" />
+                           </columns>
+                        </TableView>
+                        <HBox layoutX="47.0" layoutY="37.0" prefHeight="31.0" prefWidth="537.0" spacing="50.0">
+                           <children>
+                              <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Add Booking" />
+                              <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Edit Booking" />
+                              <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Delete Booking" />
+                           </children>
+                        </HBox>
+                        <Button layoutX="698.0" layoutY="26.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="147.0" text="Create Summary List" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

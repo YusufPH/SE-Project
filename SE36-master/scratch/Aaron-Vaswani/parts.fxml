@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="302.0" layoutY="30.0" mnemonicParsing="false" text="Admin Panel" />
+      <MenuBar layoutX="14.0" layoutY="90.0" prefHeight="29.0" prefWidth="575.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Home">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Bookings">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Customer Information">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Vehicles">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Parts">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Specialist Repair Cent">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="403.0" layoutY="35.0" text="Logged as Admin" />
+      <Button layoutX="518.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="68.0" text="Log out" />
+      <Button layoutX="518.0" layoutY="44.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="68.0" text="Quit" />
+      <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="14.0" layoutY="16.0">
+         <image>
+            <Image url="@../../Desktop/Screen%20Shot%202017-01-24%20at%2022.29.27.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="14.0" layoutY="119.0" prefHeight="259.0" prefWidth="575.0">
+         <children>
+            <TableView layoutX="175.0" prefHeight="259.0" prefWidth="400.0">
+              <columns>
+                <TableColumn prefWidth="50.0" resizable="false" text="ID" />
+                <TableColumn prefWidth="100.0" resizable="false" text="Name" />
+                  <TableColumn prefWidth="150.0" resizable="false" text="Description" />
+                  <TableColumn prefWidth="50.0" resizable="false" text="Qty" />
+                  <TableColumn maxWidth="90.0" minWidth="49.0" prefWidth="50.0" resizable="false" text="Cost" />
+              </columns>
+            </TableView>
+            <Button layoutX="14.0" layoutY="208.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="Add" />
+            <Button layoutX="80.0" layoutY="208.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Remove" />
+            <MenuButton layoutX="36.0" layoutY="25.0" mnemonicParsing="false" text="Choose Part">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Each Part" />
+                <MenuItem mnemonicParsing="false" text="Will Go" />
+                  <MenuItem mnemonicParsing="false" text="On Here" />
+              </items>
+            </MenuButton>
+            <Button layoutX="101.0" layoutY="64.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Deposit" />
+            <Button layoutX="6.0" layoutY="64.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" text="Withdraw" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1300.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VehicleRecords.VehicleRecordsGUIController">
+  <tabs>
+    <Tab text="All Vehicles">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="recordsTable" layoutY="66.0" onSort="#fillTable" prefHeight="225.0" prefWidth="1220.0">
+                    <columns>
+                        <TableColumn fx:id="customerIDCol" prefWidth="92.0" text="CustomerID" />
+                      <TableColumn fx:id="registrationCol" prefWidth="93.0" text="Registration" />
+                        <TableColumn fx:id="typeCol" prefWidth="93.0" text="Type" />
+                        <TableColumn fx:id="manufacturerCol" prefWidth="124.0" text="Manufacturer" />
+                        <TableColumn fx:id="modelCol" prefWidth="59.0" text="Model" />
+                        <TableColumn fx:id="engineSizeCol" prefWidth="104.0" text="Engine Size" />
+                        <TableColumn fx:id="fuelTypeCol" prefWidth="93.0" text="Fuel Type" />
+                        <TableColumn fx:id="colourCol" prefWidth="81.0" text="Colour" />
+                        <TableColumn fx:id="currentMileageCol" prefWidth="115.0" text="Current Mileage" />
+                        <TableColumn fx:id="lastServiceDateCol" prefWidth="130.0" text="Last Service Date" />
+                        <TableColumn fx:id="motDateCol" prefWidth="105.0" text="MOT Date" />
+                        <TableColumn fx:id="underWarrantyCol" prefWidth="130.0" text="Under Warranty" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="searchBar" layoutX="24.0" layoutY="23.0" onKeyTyped="#searchBar" prefHeight="27.0" prefWidth="243.0" />
+                  <Button layoutX="284.0" layoutY="23.0" mnemonicParsing="false" text="Search" />
+                  <Button layoutX="665.0" layoutY="22.0" mnemonicParsing="false" onAction="#addButton" text="Add" />
+                  <Button fx:id="editButton" layoutX="740.0" layoutY="23.0" mnemonicParsing="false" onAction="#editButton" text="Edit" />
+                  <Button layoutX="813.0" layoutY="22.0" mnemonicParsing="false" onAction="#deleteButton" text="Delete" />
+                  <Label fx:id="addLabel" layoutX="81.0" layoutY="318.0" text="Add Vehicle ">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="829.0" layoutY="148.0" />
+                  <GridPane fx:id="pane" layoutX="339.0" layoutY="297.0" prefHeight="234.0" prefWidth="695.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="110.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="227.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="141.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="231.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="70.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="70.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="93.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="78.57382202148438" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="98.82119750976562" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="145.296142578125" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="145.296142578125" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="174.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="111.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="111.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="111.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="111.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="190.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label />
+                        <TextField fx:id="manufacturer" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="engineSize" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="model" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Manufacturer" GridPane.rowIndex="3" />
+                        <Label text="Model" GridPane.rowIndex="4" />
+                        <Label text="Engine Size" GridPane.rowIndex="5" />
+                        <TextField fx:id="registration" prefHeight="27.0" prefWidth="147.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Registration" GridPane.rowIndex="2" />
+                        <TextField fx:id="type" prefHeight="27.0" prefWidth="146.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Type" GridPane.rowIndex="1" />
+                        <Label text="   Fuel Type" GridPane.columnIndex="2" />
+                        <TextField fx:id="fuelType" GridPane.columnIndex="3" />
+                        <Label text="   Colour" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="colour" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="currentMileage" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label text="   Current Mileage" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label text="   Last Service Date" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="lastServiceDate" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label text="   MOT Date" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <TextField fx:id="motDate" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <TextField fx:id="customer_ID" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label text="   Customer ID" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#EditRecord" text="Save Vehicle" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <Label text="Under Warranty" GridPane.rowIndex="6" />
+                        <ChoiceBox fx:id="underWarranty" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Button fx:id="add_vehicle" mnemonicParsing="false" onAction="#add_vehicle" text="Add Vehicle" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <Button mnemonicParsing="false" onAction="#handleTemplateButtonAction" text="Show Templates" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label fx:id="editLabel" layoutX="81.0" layoutY="318.0" text="Edit Vehicle">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="WarrentyButton" layoutX="531.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleWarrentyButtonAction" text="Warrenty" />
+                  <TableView fx:id="custTable" layoutX="14.0" layoutY="355.0" prefHeight="144.0" prefWidth="318.0">
+                    <columns>
+                      <TableColumn fx:id="customerID" prefWidth="113.0" text="Customer ID" />
+                      <TableColumn fx:id="fName" prefWidth="107.0" text="First Name " />
+                        <TableColumn fx:id="lName" prefWidth="99.0" text="Last Name" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="372.0" layoutY="23.0" mnemonicParsing="false" text="Vehicle Details" />
+                  <Button fx:id="selectCustomer" layoutX="113.0" layoutY="506.0" mnemonicParsing="false" onAction="#addSelectedCustomer" text="Select Customer" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

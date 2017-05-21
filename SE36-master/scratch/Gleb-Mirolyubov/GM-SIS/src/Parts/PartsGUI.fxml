@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="585.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Parts.PartsGUIController">
+   <children>
+      <AnchorPane fx:id="pane" layoutX="668.0" layoutY="397.0" prefHeight="113.0" prefWidth="77.0">         
+         <children>
+            <Button layoutX="17.0" layoutY="6.0" mnemonicParsing="false" onAction="#addPart" text="Add" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="84.0" mnemonicParsing="false" onAction="#deletePart" text="Delete" />
+            <Button layoutX="18.0" layoutY="44.0" mnemonicParsing="false" text="Edit" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="8.0" layoutY="14.0" minHeight="0.0" minWidth="0.0" prefHeight="234.0" prefWidth="633.0">
+         <children>
+            <TableView fx:id="table" layoutX="-2.0" layoutY="35.0" prefHeight="270.0" prefWidth="633.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+               <columns>
+                  <TableColumn fx:id="ID" minWidth="-1.0" prefWidth="76.26685708761215" text="ID" />
+                  <TableColumn fx:id="Name" prefWidth="123.36927795410156" text="Name" />
+                  <TableColumn fx:id="Desc" prefWidth="221.50669860839844" text="Description" />
+                  <TableColumn fx:id="Quantity" prefWidth="99.93795776367188" text="Stock Quantity" />
+                  <TableColumn fx:id="Cost" minWidth="88.0" prefWidth="-1.0" text="Cost" />
+               </columns>
+            </TableView>
+            <TextField fx:id="searchBar" layoutX="460.0" layoutY="4.0" onKeyTyped="#searchBar" prefHeight="27.0" prefWidth="152.0" promptText="search..." />
+            <Button layoutX="304.0" layoutY="4.0" mnemonicParsing="false" onAction="#depositButton" text="Deposit Part" />
+            <Button layoutX="182.0" layoutY="4.0" mnemonicParsing="false" onAction="#withdrawButton" text="Withdraw Part" />
+            <Text layoutX="44.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PARTS" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="642.0" layoutY="44.0" prefHeight="276.0" prefWidth="634.0">
+         <children>
+            <TableView fx:id="tablebooking" layoutX="42.0" prefHeight="276.0" prefWidth="617.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="bookingdate" prefWidth="59.17779541015625" text="Date" />
+                <TableColumn fx:id="bookingid" prefWidth="91.3883056640625" text="BookingID" />
+                  <TableColumn fx:id="bookingreg" prefWidth="88.6116943359375" text="Registration" />
+                  <TableColumn fx:id="bookingcust" prefWidth="97.0823974609375" text="CustomerID" />
+                  <TableColumn fx:id="bookingfname" prefWidth="101.01666259765625" text="First Name" />
+                  <TableColumn fx:id="bookingsname" prefWidth="90.697265625" text="Surname" />
+                  <TableColumn fx:id="bookingtype" prefWidth="84.0" text="Type" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="874.0" layoutY="10.0" prefHeight="35.0" prefWidth="240.0" text="Vehicle Booking">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="313.0" prefHeight="35.0" prefWidth="157.0" text="Vehicle Record">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="8.0" layoutY="344.0" prefHeight="185.0" prefWidth="615.0">
+         <children>
+            <TableView fx:id="tablerecords" layoutY="-1.0" prefHeight="185.0" prefWidth="615.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="rreg" prefWidth="103.534912109375" text="Registration" />
+                  <TableColumn fx:id="rmanu" prefWidth="145.71295166015625" text="Manufacturer" />
+                  <TableColumn fx:id="rmodel" prefWidth="149.43228149414062" text="Model" />
+                  <TableColumn fx:id="rmileage" prefWidth="119.56768798828125" text="CurrentMileage" />
+                  <TableColumn fx:id="rengsize" prefWidth="95.00006103515625" text="EngineSize" />                  
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableparts" layoutX="787.0" layoutY="339.0" prefHeight="200.0" prefWidth="310.0">
+        <columns>
+          <TableColumn fx:id="tablepartsid" prefWidth="40.94677734375" text="ID" />
+          <TableColumn fx:id="tablepartsname" prefWidth="165.0" text="Name" />
+            <TableColumn fx:id="tablepartwarranty" prefWidth="85.0" text="Warranty" />
+        </columns>
+      </TableView>
+      <Label layoutX="793.0" layoutY="319.0" prefHeight="22.0" prefWidth="168.0" text="Vehicle Parts">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="652.0" layoutY="348.0" mnemonicParsing="false" onAction="#showParts" text="&gt; Show Parts &gt;" />
+      <TextField fx:id="namefield" layoutX="215.0" layoutY="260.0" prefHeight="27.0" prefWidth="94.0" promptText="name" />
+      <TextField fx:id="descfield" layoutX="325.0" layoutY="260.0" prefHeight="27.0" prefWidth="94.0" promptText="description" />
+      <TextField fx:id="quanfield" layoutX="432.0" layoutY="260.0" prefHeight="27.0" prefWidth="94.0" promptText="quantity" />
+      <TextField fx:id="costfield" layoutX="540.0" layoutY="260.0" prefHeight="27.0" prefWidth="94.0" promptText="cost" />
+      <TextField fx:id="idfield" layoutX="149.0" layoutY="260.0" prefHeight="27.0" prefWidth="58.0" promptText="ID" />
+      <Button fx:id="deletePartButton" layoutX="18.0" layoutY="284.0" mnemonicParsing="false" onAction="#deletePartBtn" text="Delete Part" />
+      <Button fx:id="addPartButton1" layoutX="25.0" layoutY="253.0" mnemonicParsing="false" onAction="#addPartBtn" text="Add Part" />
+      <Button fx:id="editPartButton" layoutX="24.0" layoutY="315.0" mnemonicParsing="false" onAction="#editPartBtn" text="Edit Part" />
+      <Button fx:id="confirmEdit" layoutX="112.0" layoutY="315.0" mnemonicParsing="false" onAction="#confirmEdit" text="*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
